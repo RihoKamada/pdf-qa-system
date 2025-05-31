@@ -21,40 +21,53 @@
 
 1. `.env` ファイルを作成し、以下を記述：
 
-```env
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-必要なライブラリをインストール：
 
-bash
+markdown
 コピーする
 編集する
+
+2. 必要なライブラリをインストール：
+
 pip install -r requirements.txt
-インデックスを作成：
 
-bash
+markdown
 コピーする
 編集する
+
+3. インデックスを作成：
+
 python pdf_qa_setup.py
-質問応答を実行：
 
-bash
+markdown
 コピーする
 編集する
+
+4. 質問応答を実行：
+
 python pdf_qa.py
-📸 操作画面サンプル
-インデックス作成の様子
-
-質問応答の様子
-
-🙋‍♀️ 開発者
-Riho Kamada（@riho_dev）
-
-📝 ライセンス
-MIT License
 
 yaml
 コピーする
 編集する
+
+---
+
+## 📸 操作画面サンプル
+
+### インデックス作成の様子
+![操作確認画面1](操作確認画面1.png)
+
+### 質問応答の様子
+![操作確認画面2](操作確認画面2.png)
+
+---
+
+## 🙋‍♀️ 開発者  
+Riho Kamada（[@riho_dev](https://github.com/RihoKamada)）
+
+## 📝 ライセンス  
+MIT License
 
 
 
