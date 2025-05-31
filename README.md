@@ -1,68 +1,75 @@
-📄 PDF質問応答AIシステム
+# 📄 PDF質問応答AIシステム
+
 これは、LangChain + OpenAI + FAISS を活用して、任意の PDF に関する質問に自然言語で答えてくれる AI アシスタントです。
 
-✅ 機能概要
-任意の PDF ファイルを読み込み
+## ✅ 機能概要
 
-テキストを分割し、ベクトル化して FAISS インデックスを作成
+- 任意の PDF ファイルを読み込み
+- テキストを分割し、ベクトル化して FAISS インデックスを作成
+- GPT-3.5/4 を使って関連情報をもとに質問に回答
 
-GPT-3.5/4 を使って関連情報をもとに質問に回答
+## 🧠 使用技術
 
-🧠 使用技術
-Python 3.x
+- Python 3.x
+- LangChain
+- OpenAI GPT API
+- FAISS（類似文書検索）
+- PyPDF2（PDFテキスト抽出）
+- dotenv（APIキー管理）
 
-LangChain
+## 🛠 セットアップ手順
 
-OpenAI GPT API
+1. `.env` ファイルを作成し、以下を記述：
 
-FAISS（類似文書検索）
-
-PyPDF2（PDFテキスト抽出）
-
-dotenv（APIキー管理）
-
-🛠 セットアップ手順
-.env ファイルを作成し、以下を記述：
-
-env
-コピーする
-編集する
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```env
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 必要なライブラリをインストール：
 
 bash
 コピーする
 編集する
 pip install -r requirements.txt
-PDF をベクトル化：
+インデックスを作成：
 
 bash
 コピーする
 編集する
 python pdf_qa_setup.py
-質問を実行：
+質問応答を実行：
 
 bash
 コピーする
 編集する
 python pdf_qa.py
-🖼 実行例（スクリーンショット）
-📘 インデックス作成の様子：
+📸 操作画面サンプル
+インデックス作成の様子
 
-🤖 質問＆回答の様子：
+質問応答の様子
 
-🗂 ディレクトリ構成（例）
-pgsql
-コピーする
-編集する
-pdf-qa-system/
-├── pdf_qa.py
-├── pdf_qa_setup.py
-├── samplePDF.pdf
-├── index.faiss/
-├── .env
-├── .gitignore
-├── README.md
-└── requirements.txt
 🙋‍♀️ 開発者
 Riho Kamada（@riho_dev）
+
+📝 ライセンス
+MIT License
+
+yaml
+コピーする
+編集する
+
+---
+
+### 🔧 注意点
+- `README.md` と **画像（例：操作確認画面1.png）を同じ階層**に置いてください。
+- ファイル名は **日本語でも表示できますが、スペースを含まないようにする**とより安定します（例：`operation_1.png` などにすると無難）。
+- 編集後は「**Commit changes**」を押して保存してください。
+
+---
+
+これで、GitHub上でも画像付きでわかりやすくなります！  
+必要ならこのマークダウンを丸ごと貼り付けてください✍️
+
+
+
+
+
+
