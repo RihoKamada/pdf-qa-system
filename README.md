@@ -1,59 +1,44 @@
-# AI Secretary Assistant 🤖📋
+# 📄 PDF QA Assistant 🤖📚
 
-AI Secretary Assistant は、Googleカレンダー・Gmail・LINEを活用し、予定の要約・メール対応・通知を自動化するAIアシスタントです。
+**PDF QA Assistant** は、任意のPDFファイルを読み込み、自然言語での質問に答えるAIアシスタントです。LangChain・OpenAI・FAISS を活用し、PDFの内容を理解して回答を生成します。
 
-## ✨ 機能
+---
 
-- 📆 Googleカレンダーの予定取得・要約
-- 📧 Gmailの受信メール要約・返信文自動生成
-- 💬 LINE Messaging APIを通じたプッシュ通知
-- 🗂 顧客対応履歴の管理（Google Sheetsと連携）
+## ✨ 主な機能
+
+- 📄 PDFからテキストを抽出し、意味単位に分割
+- 🧠 FAISS でベクトル検索し、関連情報を抽出
+- 💬 OpenAI GPT API を使って質問に対する自然な応答を生成
+
+---
 
 ## 🔧 技術スタック
 
 - Python 3.x
-- OpenAI GPT API
-- Google API (Calendar, Gmail, Docs, Sheets)
-- LINE Messaging API
-- Flask / FastAPI（※今後追加予定）
-
-## 🛠 セットアップ方法
-
-1. `.env` に必要なAPIキー・シークレットを設定
-2. `pip install -r requirements.txt`
-3. 各モジュールを個別に実行 or スケジューラと連携して実行
-
-## 🚀 今後の開発予定
-
-- Slackとの連携
-- より自然な会話型応答の導入
-- Notionへの議事録転送
+- [LangChain](https://www.langchain.com/)
+- OpenAI GPT-3.5 / GPT-4 API
+- FAISS（類似文書検索）
+- PyPDF2（PDFテキスト抽出）
+- python-dotenv（APIキー管理）
 
 ---
 
-## 📂 ディレクトリ構成（例）
+## 🛠 セットアップ手順
 
-temp-ai-secretary/
-├── main.py
-├── gmail_summary.py
-├── calendar_summary.py
-├── line_push.py
-├── token.json
-├── credentials.json（※.gitignore推奨）
-├── README.md
+# .env ファイルに以下を記述（自分の OpenAI API キーに置き換えてください）
+OPENAI_API_KEY=sk-あなたのOpenAIキー
 
-yaml
-コピーする
-編集する
+📌 今後の機能追加予定
+Streamlit UIによるWebインターフェース化
 
----
+質問履歴の保存・可視化
 
-## 🙋‍♀️ 開発者
+複数PDFの横断検索対応
 
-Riho Kamada（[@riho_dev](https://github.com/RihoKamada)）
+👩‍💻 作者
+Riho Kamada（@riho_dev）
+AI×日常業務効率化をテーマに活動中。
+お気軽にフォロー・コラボください！
 
----
-
-## 📝 ライセンス
-
-MIT License# AI Secretary Assistant
+📜 ライセンス
+MIT License
