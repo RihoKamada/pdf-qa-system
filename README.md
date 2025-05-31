@@ -24,16 +24,12 @@
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 markdown
-コピーする
-編集する
 
 2. 必要なライブラリをインストール：
 
 pip install -r requirements.txt
 
 markdown
-コピーする
-編集する
 
 3. インデックスを作成：
 
@@ -48,8 +44,6 @@ markdown
 python pdf_qa.py
 
 yaml
-コピーする
-編集する
 
 ---
 
@@ -60,6 +54,7 @@ yaml
 
 ### 質問応答の様子
 ![操作確認画面2](操作確認画面2.png)
+<img width="893" alt="操作確認画面２" src="https://github.com/user-attachments/assets/e26af289-83d4-4526-9d88-2806b357fb66" />
 
 ---
 
